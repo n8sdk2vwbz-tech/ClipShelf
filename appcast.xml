@@ -14,9 +14,9 @@
             <description><![CDATA[<ul><li>Fix: Dateiname beim Herausziehen bekam beim Ablegen in Finder eine doppelte Dateiendung (z.B. .pdf.pdf).</li></ul>]]></description>
             <enclosure
                 url="https://github.com/n8sdk2vwbz-tech/ClipShelf/releases/download/v1.1/ClipShelf-1.1.zip"
-                length="1509600"
+                length="1509612"
                 type="application/octet-stream"
-                sparkle:edSignature="rmyVrEgp8yx/VxwkehuHwJSvQf2sQVK+e2h86TPvP9e6g5FPcfsh4peU3c0x+z66uUieBM1xdtoXjr5egkwfBg==" />
+                sparkle:edSignature="mXobbeaEDPTT4jgTLtu4FnT1veNhHesPyTaU6hx58NKwe7h+oahwz/CRHVlZ1/82mQE7WsR01Lo1f6Bxc9D3DA==" />
         </item>
         <item>
             <title>1.0</title>
