@@ -2,13 +2,15 @@ import AppKit
 
 /// Shared NSItemProvider construction for dragging files/text out of ClipShelf's rows.
 enum DragProviders {
-    /// `NSItemProvider(contentsOf:)` is documented to derive the suggested name from the
-    /// URL automatically, but that didn't hold up in practice — some destinations fell
-    /// back to a generic "PDF document.pdf"-style placeholder instead of the real name.
-    /// So the name is now always set explicitly rather than relying on that.
+    /// `NSItemProvider(contentsOf:)` also registers the file's UTI, and Finder appends
+    /// that type's preferred extension onto whatever `suggestedName` it's given — even
+    /// when the name already ends in that same extension, producing "name.pdf.pdf".
+    /// Handing over the name WITHOUT its extension lets Finder append it exactly once.
     static func file(_ url: URL, suggestedName: String? = nil) -> NSItemProvider {
         let provider = NSItemProvider(contentsOf: url) ?? NSItemProvider()
-        provider.suggestedName = suggestedName ?? url.lastPathComponent
+        let name = suggestedName ?? url.lastPathComponent
+        let nameWithoutExtension = (name as NSString).deletingPathExtension
+        provider.suggestedName = nameWithoutExtension.isEmpty ? name : nameWithoutExtension
         return provider
     }
 

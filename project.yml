@@ -9,8 +9,8 @@ options:
 settings:
   base:
     SWIFT_VERSION: "5.0"
-    MARKETING_VERSION: "1.0"
-    CURRENT_PROJECT_VERSION: "1"
+    MARKETING_VERSION: "1.1"
+    CURRENT_PROJECT_VERSION: "2"
     CODE_SIGN_STYLE: Automatic
     DEVELOPMENT_TEAM: "8936F2R3FF"
     ENABLE_PREVIEWS: YES
@@ -48,7 +48,6 @@ targets:
         LSUIElement: true
         LSMinimumSystemVersion: "14.0"
         NSHumanReadableCopyright: "© 2026 Maxim Tschitschko"
-        CFBundleShortVersionString: "1.0"
         NSAppleEventsUsageDescription: "ClipShelf sendet Tastatureingaben, um kopierte Inhalte direkt einzufügen."
         SUFeedURL: "https://raw.githubusercontent.com/n8sdk2vwbz-tech/ClipShelf/main/appcast.xml"
         SUEnableAutomaticChecks: true

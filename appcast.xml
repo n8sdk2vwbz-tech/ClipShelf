@@ -6,6 +6,19 @@
         <description>Updates für ClipShelf</description>
         <language>de</language>
         <item>
+            <title>1.1</title>
+            <pubDate>Sat, 15 Aug 2026 12:45:00 +0000</pubDate>
+            <sparkle:version>2</sparkle:version>
+            <sparkle:shortVersionString>1.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<ul><li>Fix: Dateiname beim Herausziehen bekam beim Ablegen in Finder eine doppelte Dateiendung (z.B. .pdf.pdf).</li></ul>]]></description>
+            <enclosure
+                url="https://github.com/n8sdk2vwbz-tech/ClipShelf/releases/download/v1.1/ClipShelf-1.1.zip"
+                length="1509600"
+                type="application/octet-stream"
+                sparkle:edSignature="rmyVrEgp8yx/VxwkehuHwJSvQf2sQVK+e2h86TPvP9e6g5FPcfsh4peU3c0x+z66uUieBM1xdtoXjr5egkwfBg==" />
+        </item>
+        <item>
             <title>1.0</title>
             <pubDate>Sat, 15 Aug 2026 12:38:00 +0000</pubDate>
             <sparkle:version>1</sparkle:version>
