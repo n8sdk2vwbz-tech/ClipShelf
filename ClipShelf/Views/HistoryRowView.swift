@@ -54,7 +54,12 @@ struct HistoryRowView: View {
         .onDrag { store.dragItemProvider(for: item) }
         .contextMenu {
             Button {
-                AirDropSender.send(store.airDropURLs(for: item))
+                ShareSender.sendViaMessages(store.airDropURLs(for: item))
+            } label: {
+                Label("Über Nachrichten senden…", systemImage: "message")
+            }
+            Button {
+                ShareSender.sendViaAirDrop(store.airDropURLs(for: item))
             } label: {
                 Label("Über AirDrop senden…", systemImage: "square.and.arrow.up")
             }

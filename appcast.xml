@@ -6,6 +6,19 @@
         <description>Updates für ClipShelf</description>
         <language>de</language>
         <item>
+            <title>1.2</title>
+            <pubDate>Sat, 15 Aug 2026 13:55:00 +0000</pubDate>
+            <sparkle:version>3</sparkle:version>
+            <sparkle:shortVersionString>1.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<ul><li>Neu: Dateien lassen sich jetzt auch zuverlässig über Nachrichten senden (Rechtsklick), als robustere Alternative zum Ziehen in Messages.</li></ul>]]></description>
+            <enclosure
+                url="https://github.com/n8sdk2vwbz-tech/ClipShelf/releases/download/v1.2/ClipShelf-1.2.zip"
+                length="1510887"
+                type="application/octet-stream"
+                sparkle:edSignature="mF8ebKEGVejcs4bijoepwL5kc/RAaEA3RGl4F6IQybhnKzax8nUjGRRWUM8jR53qaYCfp0bMbiD5xwkcJKkZAA==" />
+        </item>
+        <item>
             <title>1.1</title>
             <pubDate>Sat, 15 Aug 2026 12:45:00 +0000</pubDate>
             <sparkle:version>2</sparkle:version>

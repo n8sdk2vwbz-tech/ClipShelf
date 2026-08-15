@@ -37,7 +37,12 @@ struct ShelfItemRowView: View {
         .onDrag { viewModel.dragItemProvider(for: item) }
         .contextMenu {
             Button {
-                AirDropSender.send(viewModel.airDropURLs(for: item))
+                ShareSender.sendViaMessages(viewModel.airDropURLs(for: item))
+            } label: {
+                Label("Über Nachrichten senden…", systemImage: "message")
+            }
+            Button {
+                ShareSender.sendViaAirDrop(viewModel.airDropURLs(for: item))
             } label: {
                 Label("Über AirDrop senden…", systemImage: "square.and.arrow.up")
             }

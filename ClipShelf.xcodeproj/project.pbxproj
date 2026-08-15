@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A9B716795772E76A39D2285 /* AirDropSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5EFD8B040D76D8A3744FAB /* AirDropSender.swift */; };
 		10D5E617F8CF9FF9365AC85C /* ShelfPanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB746FA026350D261B02D06 /* ShelfPanelController.swift */; };
 		1109B767A647450CE750877F /* WindowDraggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C91EA1E57BDE5519BA5E3D /* WindowDraggable.swift */; };
 		140AB6E2DFAD3FDB5276874E /* FloatingPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D422F4DAA2C855EC6A488B6 /* FloatingPanel.swift */; };
@@ -34,6 +33,7 @@
 		C3FA9BDBE8F53457D6AE2F50 /* ClipboardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBE4040622B4B55AF0658BF /* ClipboardStore.swift */; };
 		C7FDDAC4159E104E9314E554 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 6531E35A58B76B6366DCE8E8 /* Sparkle */; };
 		D4AD7DDD488F8C06354BAF53 /* PasteboardWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7251294D86179EB428706051 /* PasteboardWriter.swift */; };
+		ECDE9E45960652DB909DA622 /* ShareSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C13279BF78F5C4034E5FED /* ShareSender.swift */; };
 		F9F9A8397585E2678D1A8AE2 /* ShelfStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13434FFFE81A8B363C91C0F /* ShelfStore.swift */; };
 		FA9FA02DF249CC8D8C7257E2 /* ShelfItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E454E5C71084323FE97C0C /* ShelfItemRowView.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +54,7 @@
 		7D422F4DAA2C855EC6A488B6 /* FloatingPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanel.swift; sourceTree = "<group>"; };
 		836DD6B019C5911D9A1F6316 /* ClipShelfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipShelfApp.swift; sourceTree = "<group>"; };
 		8425F7DCECB08CE13C500EE1 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		94C13279BF78F5C4034E5FED /* ShareSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSender.swift; sourceTree = "<group>"; };
 		9909E40719C5C3B8B85FF1E1 /* ClipboardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardItem.swift; sourceTree = "<group>"; };
 		9FCC3FCDBC9334E66CFE05C0 /* ShelfViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfViewModel.swift; sourceTree = "<group>"; };
 		AD97D610C3C35E59BEF3C584 /* ShelfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfView.swift; sourceTree = "<group>"; };
@@ -63,7 +64,6 @@
 		CFB746FA026350D261B02D06 /* ShelfPanelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfPanelController.swift; sourceTree = "<group>"; };
 		D13434FFFE81A8B363C91C0F /* ShelfStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfStore.swift; sourceTree = "<group>"; };
 		D8604814F1AD8F635EFF36CF /* WindowDragTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowDragTracker.swift; sourceTree = "<group>"; };
-		DE5EFD8B040D76D8A3744FAB /* AirDropSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirDropSender.swift; sourceTree = "<group>"; };
 		EDBE4040622B4B55AF0658BF /* ClipboardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardStore.swift; sourceTree = "<group>"; };
 		F16288887CB18B9D135AEB01 /* LaunchAtLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLogin.swift; sourceTree = "<group>"; };
 		F99955F1D13F029892150CE7 /* HistoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRowView.swift; sourceTree = "<group>"; };
@@ -145,7 +145,6 @@
 		70A9ADA37D7E1063DC670238 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				DE5EFD8B040D76D8A3744FAB /* AirDropSender.swift */,
 				451BEFE77AD4623CF41CB024 /* ClipboardMonitor.swift */,
 				EDBE4040622B4B55AF0658BF /* ClipboardStore.swift */,
 				361D294F5292149AB4830F89 /* DragProviders.swift */,
@@ -154,6 +153,7 @@
 				F16288887CB18B9D135AEB01 /* LaunchAtLogin.swift */,
 				7251294D86179EB428706051 /* PasteboardWriter.swift */,
 				FFD5FCF0BFD91A6585ABB301 /* Persistence.swift */,
+				94C13279BF78F5C4034E5FED /* ShareSender.swift */,
 				D13434FFFE81A8B363C91C0F /* ShelfStore.swift */,
 				9FCC3FCDBC9334E66CFE05C0 /* ShelfViewModel.swift */,
 			);
@@ -256,7 +256,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A9B716795772E76A39D2285 /* AirDropSender.swift in Sources */,
 				1B99A2C002E821FC1B7FE2E1 /* AppDelegate.swift in Sources */,
 				52FDFB8074835900CC58E731 /* ClipShelfApp.swift in Sources */,
 				203291169799636EFCBD6E48 /* ClipboardItem.swift in Sources */,
@@ -275,6 +274,7 @@
 				D4AD7DDD488F8C06354BAF53 /* PasteboardWriter.swift in Sources */,
 				3B6527E473E600A31AD496C6 /* Persistence.swift in Sources */,
 				7278CDBCDCF580BDAA223124 /* SettingsView.swift in Sources */,
+				ECDE9E45960652DB909DA622 /* ShareSender.swift in Sources */,
 				7C0E1D9F9A07A1C8DD899904 /* ShelfItem.swift in Sources */,
 				FA9FA02DF249CC8D8C7257E2 /* ShelfItemRowView.swift in Sources */,
 				10D5E617F8CF9FF9365AC85C /* ShelfPanelController.swift in Sources */,
@@ -359,7 +359,7 @@
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 8936F2R3FF;
@@ -376,7 +376,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -422,7 +422,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 8936F2R3FF;
@@ -445,7 +445,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;

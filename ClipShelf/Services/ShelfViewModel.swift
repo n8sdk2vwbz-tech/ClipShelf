@@ -62,7 +62,7 @@ final class ShelfViewModel: ObservableObject {
             guard let url = store.imageFileURL(for: item) else { return [] }
             return [url]
         case .text:
-            guard let text = item.text, let url = AirDropSender.temporaryTextFile(text) else { return [] }
+            guard let text = item.text, let url = ShareSender.temporaryTextFile(text) else { return [] }
             return [url]
         }
     }
