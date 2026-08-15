@@ -1,5 +1,6 @@
 import AppKit
 import Carbon.HIToolbox
+import Sparkle
 import SwiftUI
 
 final class AppDelegate: NSObject, NSApplicationDelegate {
@@ -20,6 +21,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         shelfViewModel: shelfViewModel
     )
     private lazy var shelfPanelController = ShelfPanelController(viewModel: shelfViewModel)
+    private lazy var updaterController = SPUStandardUpdaterController(
+        startingUpdater: true,
+        updaterDelegate: nil,
+        userDriverDelegate: nil
+    )
 
     private var historyHotKeyID: UInt32?
 
@@ -31,6 +37,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
         clipboardMonitor.start()
         shelfPanelController.start()
+        _ = updaterController // starts Sparkle's background update checks
 
         historyHotKeyID = HotKeyManager.shared.register(
             keyCode: UInt32(kVK_ANSI_V),
@@ -105,6 +112,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(withTitle: shelfTitle, action: #selector(toggleShelfFromMenu), keyEquivalent: "").target = self
         menu.addItem(NSMenuItem.separator())
         menu.addItem(withTitle: "Einstellungen…", action: #selector(openSettingsFromMenu), keyEquivalent: "").target = self
+        let updateItem = menu.addItem(withTitle: "Nach Updates suchen…", action: #selector(checkForUpdates), keyEquivalent: "")
+        updateItem.target = self
+        updateItem.isEnabled = updaterController.updater.canCheckForUpdates
         menu.addItem(NSMenuItem.separator())
         menu.addItem(withTitle: "Beenden", action: #selector(quit), keyEquivalent: "").target = self
 
@@ -123,6 +133,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc private func openSettingsFromMenu() {
         showSettings()
+    }
+
+    @objc private func checkForUpdates() {
+        updaterController.checkForUpdates(nil)
     }
 
     @objc private func quit() {

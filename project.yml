@@ -22,12 +22,19 @@ settings:
       CODE_SIGN_STYLE: Manual
       CODE_SIGN_IDENTITY: "Developer ID Application"
 
+packages:
+  Sparkle:
+    url: https://github.com/sparkle-project/Sparkle
+    from: 2.9.5
+
 targets:
   ClipShelf:
     type: application
     platform: macOS
     sources:
       - path: ClipShelf
+    dependencies:
+      - package: Sparkle
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.maximtschitschko.ClipShelf
@@ -43,3 +50,7 @@ targets:
         NSHumanReadableCopyright: "© 2026 Maxim Tschitschko"
         CFBundleShortVersionString: "1.0"
         NSAppleEventsUsageDescription: "ClipShelf sendet Tastatureingaben, um kopierte Inhalte direkt einzufügen."
+        SUFeedURL: "https://raw.githubusercontent.com/n8sdk2vwbz-tech/ClipShelf/main/appcast.xml"
+        SUEnableAutomaticChecks: true
+        SUScheduledCheckInterval: 86400
+        SUPublicEDKey: "NOHkrCf4kgFI/erXwvrpmwVKAlSNYjfvcMUaQax+LDE="

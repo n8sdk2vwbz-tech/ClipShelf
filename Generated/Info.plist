@@ -26,5 +26,13 @@
 	<string>ClipShelf sendet Tastatureingaben, um kopierte Inhalte direkt einzufügen.</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>© 2026 Maxim Tschitschko</string>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
+	<key>SUFeedURL</key>
+	<string>https://raw.githubusercontent.com/n8sdk2vwbz-tech/ClipShelf/main/appcast.xml</string>
+	<key>SUPublicEDKey</key>
+	<string>NOHkrCf4kgFI/erXwvrpmwVKAlSNYjfvcMUaQax+LDE=</string>
+	<key>SUScheduledCheckInterval</key>
+	<integer>86400</integer>
 </dict>
 </plist>
